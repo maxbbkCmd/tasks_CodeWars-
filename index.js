@@ -178,3 +178,56 @@ console.log(invert([1, 6, 100, 4, 5]));
 function opposite(number) {
   return number - number - number
 }
+
+
+// -------------------------------------------------------------
+// 💚 Входная строка всегда будет в нижнем регистре, но может быть пустой. 2.  Если символ в строке — пробел, то пропустите его, как будто это пустое место
+// wave("hello") => ["Hello", "hEllo", "heLlo", "helLo", "hellO"]
+// -------------------------------------------------------------
+
+function wave(str) {
+  let result = []
+  result.push(str.split('').forEach(item => {
+    item.toUpperCase()
+  }))
+  return result;
+}
+console.log(wave("hello"));
+
+// -------------------------------------------------------------
+// 💚 Your task is to convert strings to how they would be written by Jaden Smith. The strings are actual quotes from Jaden Smith, but they are not capitalized in the same way he originally typed them.
+// Not Jaden-Cased: "How can mirrors be real if our eyes aren't real"
+// Jaden-Cased:     "How Can Mirrors Be Real If Our Eyes Aren't Real"
+// -------------------------------------------------------------
+
+
+function upperCase(text) {
+  return text.split(' ')
+    .map(word => word[0].toUpperCase() + word.slice(1))
+  .join(' ')
+}
+
+console.log(upperCase("How can mirrors be real if our eyes aren't real"));
+
+
+// -------------------------------------------------------------
+// 💚 Даны два целых числа a и b, которые могут быть положительными или отрицательными, найти сумму всех целых чисел между ними и включая их и вернуть ее. Если два числа равны, вернуть a или b.
+// (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
+// -------------------------------------------------------------
+
+
+function getSum(a, b) {
+  let result = 0;
+
+  let min = Math.min(a, b);
+  let max = Math.max(a, b);
+
+  for (let i = min; i <= max; i++) {
+    result = i + result;
+  }
+  if (a === b) {
+    return min;
+  } return result;
+}
+
+console.log(getSum(-1, -1));
