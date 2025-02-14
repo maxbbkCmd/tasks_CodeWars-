@@ -132,7 +132,7 @@ console.log(hasPassingGrade(87));
 // Будьте осторожны с пунктуацией и пробелами в сообщении.
 
 function studentMsg(totalScores, studentScore) {
-  const 
+  // const 
 }
 console.log(studentMsg([92, 88, 12, 77, 57, 100, 67, 38, 97, 89], 37));
 
