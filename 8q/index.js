@@ -137,19 +137,8 @@ const b = [1, 2, 3, 4, 5]
 
 
 function arrayPlusArray(arr1, arr2) {
-
-  let sumA = 0;
-  let sumB = 0;
-
-  for (let i = 0; i < arr1.length; i++) {
-    sumA += arr1[i]
-  }
-
-  for (let i = 0; i < arr2.length; i++) {
-    sumB += arr2[i]
-  }
-
-  return sumA + sumB; 
+  const sum = arr1.concat(arr2).reduce((acc, value) => acc + value, 0)
+  return sum
 }
 
 console.log(arrayPlusArray(a, b));
