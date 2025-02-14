@@ -110,21 +110,46 @@
 // Если x < y → наша команда проиграла → 0 очков.
 // Если x == y → ничья → 1 очко.
 
-const games = ["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]
+// const games = ["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]
 
-function points(games) {
-  let summ = 0
+// function points(games) {
+//   let summ = 0
 
-  for (let i = 0; i < games.length; i++) {
-    const [x, y] = games[i].split(':').map(Number)
-    if (x > y) {
-      summ += 3;
-    } else if (x == y) {
-      summ += 1
-    } else if (x < y) { 
-      summ += 0
-    } 
+//   for (let i = 0; i < games.length; i++) {
+//     const [x, y] = games[i].split(':').map(Number)
+//     if (x > y) {
+//       summ += 3;
+//     } else if (x == y) {
+//       summ += 1
+//     } else if (x < y) { 
+//       summ += 0
+//     } 
+//   }
+//   return summ
+// }
+// console.log(points(games));
+
+// -------------------------------------------------------------
+
+const a = [1, 2, 3, 4, 5]
+
+const b = [1, 2, 3, 4, 5]
+
+
+function arrayPlusArray(arr1, arr2) {
+
+  let sumA = 0;
+  let sumB = 0;
+
+  for (let i = 0; i < arr1.length; i++) {
+    sumA += arr1[i]
   }
-  return summ
+
+  for (let i = 0; i < arr2.length; i++) {
+    sumB += arr2[i]
+  }
+
+  return sumA + sumB; 
 }
-console.log(points(games));
+
+console.log(arrayPlusArray(a, b));
