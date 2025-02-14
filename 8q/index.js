@@ -89,17 +89,42 @@
 // -------------------------------------------------------------
 // Задача Вы получаете массив чисел, возвращаете сумму всех положительных единиц. Пример [1, -4, 7, 12] => 1 + 7 + 12 = 20 1+7+12=20 Примечание Если суммировать нечего, сумма по умолчанию равна 0.
 
-const array = [1, -4, 7, 12];
+// const array = [1, -4, 7, 12];
 
-function positiveSum(arr) {
-  let sub = 0;
+// function positiveSum(arr) {
+//   let sub = 0;
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] > 0) {
-      sub += arr[i]
+//   for (let i = 0; i < arr.length; i++) {
+//     if (arr[i] > 0) {
+//       sub += arr[i]
+//     }
+//   }
+//   return sub
+
+// }
+// console.log(positiveSum(array))
+
+// -------------------------------------------------------------
+// Для каждого матча:
+// Если x > y → наша команда выиграла → 3 очка.
+// Если x < y → наша команда проиграла → 0 очков.
+// Если x == y → ничья → 1 очко.
+
+const games = ["1:0","2:0","3:0","4:0","2:1","1:3","1:4","2:3","2:4","3:4"]
+
+function points(games) {
+  let summ = 0
+
+  for (let i = 0; i < games.length; i++) {
+    const [x, y] = games[i].split(':').map(Number)
+    if (x > y) {
+      summ += 3;
+    } else if (x == y) {
+      summ += 1
+    } else if (x < y) { 
+      summ += 0
     } 
   }
-  return sub
-
+  return summ
 }
-console.log(positiveSum(array)) 
+console.log(points(games));
