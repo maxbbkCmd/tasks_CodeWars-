@@ -149,11 +149,18 @@ const { get } = require('http');
 // Конец учебного года, судьбоносный момент вашего школьного отчета.Средние баллы должны быть подсчитаны.Все ученики приходят к вам и умоляют вас подсчитать их средний балл.Легко! Вам просто нужно написать сценарий.
 // Верните среднее значение указанного массива, округленное до ближайшего целого числа. Массив никогда не будет пустым.
 
-const arr = [1,1,1,1,1,1,1,2]
+// const arr = [1,1,1,1,1,1,1,2]
 
-function getAverage(marks){
-  const sum = marks.length
-  return sum
+// function getAverage(marks){
+//   const sum = marks.length
+//   return sum
+// }
+
+// console.log(getAverage(arr));
+
+// -------------------------------------------------------------
+
+String.prototype.isUpperCase = function () {
+  return this.toString() === this.toUpperCase();
 }
-
-console.log(getAverage(arr));
+console.log(String.prototype.isUpperCase('asdASFASFASF asfasf'));
