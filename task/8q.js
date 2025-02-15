@@ -160,7 +160,7 @@ const { get } = require('http');
 
 // -------------------------------------------------------------
 
-String.prototype.isUpperCase = function () {
-  return this.toString() === this.toUpperCase();
-}
-console.log(String.prototype.isUpperCase('asdASFASFASF asfasf'));
+// String.prototype.isUpperCase = function () {
+//   return this.toString() === this.toUpperCase();
+// }
+// console.log(String.prototype.isUpperCase('asdASFASFASF asfasf'));
