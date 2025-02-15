@@ -152,8 +152,8 @@ const { get } = require('http');
 const arr = [1,1,1,1,1,1,1,2]
 
 function getAverage(marks){
-  const sum = marks.reduce((acc, value) => acc + value, 0) / marks.length
-  return Math.floor(sum)
+  const sum = marks.length
+  return sum
 }
 
 console.log(getAverage(arr));
